@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MAP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+
+<style>
+  .hidden {
+      display: none !important; /* Ensure that items with the hidden class are not displayed */
+  }
+  
+  .gallery-container {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  
+  .filter-buttons {
+      margin-bottom: 20px;
+  }
+  
+  .filter-button {
+      padding: 5px 10px;
+      margin-right: 10px;
+      cursor: pointer;
+      border: none;
+      background-color: #ddd;
+      /* border-radius: 5px; */
+  }
+  
+  .gallery {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  
+  .item img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 5px;
+  }
+  
+  .item {
+      display: flex; /* Use flexbox to arrange items horizontally */
+      flex-wrap: wrap; /* Allow items to wrap to the next row */
+  }
+  
+  .card {
+      width: calc(33.33% - 20px); /* Adjust the width of each card to fit three cards per row */
+      margin: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #fff;
+  }
+  
+  .description {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+      text-align: center; /* Optionally, center the description text */
+  }
+  
+  
+  
+  </style>
+
+
+<style>
+  .popupMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 9999;
+  }
+</style>
+
+
+</head>
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <img src="../images/main_page/logo1.png" alt="Logo" style="max-width: 150px; height: 60px;">
+      <a href="#MAP" style="text-decoration: none;">MAPPING ARTISTIC PROGRESSSION</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <!-- <a href="#about" class="w3-bar-item w3-button">ABOUT</a> -->
+        <a href="../app.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> HOME</a>
+        <a href="../pages/work.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+        <a href="../pages/blog.html" class="w3-bar-item w3-button"><i class="fa fa-file"></i> BLOG</a>
+        <a href="../app.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<!-- <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  
+  <a href="../app.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">BLOG</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav> -->
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  
+
+</header>
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+<!-- ##################################### -->
+<!-- <hr id="about"> -->
+<!-- ##################################### -->
+
+
+<!-- <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px;border-radius: 8px; box-shadow: 0 2px 8px 1px rgba(0,0,0,0.2); max-width: 80%; margin: 0 auto; background-color: #fff;">
+  <img src="../images/main_page/workpic2.jpg" alt="Image" style="max-width: 200px; height: auto; margin-right: 20px; border-radius: 8px;">
+  <div style="flex-grow: 1;">
+    <h2>Right Content</h2>
+    <p>This is some text content on the right side of the card. You can put any content here.</p>
+  </div>
+</div> -->
+
+
+
+</div>
+
+
+
+<br>
+
+<!-- ######################################################################### -->
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-32"> 
+    <h1><b>BLOG</b></h1>
+    <p>Welcome to the blog of <span class="w3-tag">Chitrasanthe 2025</span></p>
+  </header>
+  
+  <!-- Grid -->
+  <div class="w3-row">
+  
+  <!-- Blog entries -->
+  <div class="w3-col l8 s12">
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <img src="../images/chitrasanthe/sculpture.jpeg" alt="Nature" style="width:100%">
+      <div class="w3-container">
+        <h3><b>Art in Action</b></h3>
+        <h5>Sculpting Dreams and Building Teams at Chitra Santhe, <span class="w3-opacity">Dec-Jan(2025)</span></h5>
+      </div>
+  
+      <div class="w3-container">
+        <p>
+  At the heart of this year’s Chitra Santhe lies a project that beautifully embodies the spirit of art and collaboration. A sculpting endeavor, ambitious in both size and symbolism, is underway: a 9-by-9-foot hand crafted from thermocol, spread like a flower in full bloom. This awe-inspiring installation is not just a testament to artistic vision but also a reflection of the unity and dedication of the team bringing it to life.</p>
+        <!-- <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+          </div>
+          <div class="w3-col m4 w3-hide-small">
+            <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <hr>
+  
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+    <img src="../images/chitrasanthe/hand_sculpture.jpeg" alt="hand" style="width:100%">
+      <div class="w3-container">
+        <h3><b>Sculpting the Hand of Expression</b></h3>
+        <h5><span class="w3-opacity">Jan, 2025</span></h5>
+      </div>
+  
+      <div class="w3-container">
+        <p>The centerpiece, a giant hand spreading like a flower, is designed to captivate and inspire. Its material, thermocol, is both challenging and versatile, demanding precision and creativity from the artists involved. The hand symbolizes openness, creativity, and the beauty of shared expression. As it takes shape, the sculpture invites viewers to ponder the strength and grace that art can embody, even when built from the simplest of materials.</p>
+        <!-- <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+          </div>
+          <div class="w3-col m4 w3-hide-small">
+            <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  <!-- END BLOG ENTRIES -->
+  </div>
+  
+  <!-- Introduction menu -->
+  <div class="w3-col l4">
+    <!-- About Card -->
+    <div class="w3-card w3-margin w3-margin-top">
+    <!-- <img src="/w3images/avatar_g.jpg" style="width:100%"> -->
+      <div class="w3-container w3-white">
+        <h4><b>Chitrasanthe</b></h4>
+        <p>The theme of the 22nd edition of Chitra Santhe in Bengaluru, India, which will be held on January 5, 2025, is "Protecting Women: A Shared Responsibility"</p>
+      </div>
+    </div><hr>
+    
+    <!-- Posts -->
+    <div class="w3-card w3-margin">
+      <div class="w3-container w3-padding">
+        <h4><b>Team Behind the Magic</b></h4>
+      </div>
+      <ul class="w3-ul w3-hoverable w3-white">
+        <li class="w3-padding-16">
+          <img src="../images/chitrasanthe/subodhkathal.jpeg" alt="Image" class="w3-left w3-margin-right" style="width:80px">
+          <span class="w3-large">Subodh Kathal<br></span>
+          <span> Illustrator | Passionate about storytelling through caricatures and life-inspired illustrations.</span>
+          <a href="https://www.instagram.com/introvert_illustrator?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;"><p><i class="fa fa-instagram fa-fw w3-xlarge w3-margin-right"></i> @introvert_illustrator</p></a>
+          
+        </li>
+        <li class="w3-padding-16">
+          <img src="../images/chitrasanthe/shakeel.jpeg" alt="Image" class="w3-left w3-margin-right" style="width:80px">
+          <span class="w3-large">Shakeel Ahmad</span><br>
+          <span>Sculptor Artist</span>
+          <br><br><br>
+          <a href="https://www.instagram.com/sculptoart?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;"><p><i class="fa fa-instagram fa-fw w3-xlarge w3-margin-right"></i> @sculptoart</p></a>
+        </li> 
+        <li class="w3-padding-16">
+          <img src="../images/chitrasanthe/shubhankar.jpeg" alt="Image" class="w3-left w3-margin-right" style="width:100px">
+          <span class="w3-large">Subhankar Chakraborty</span><br>
+          <span>Artist| Story book Illustrator| Background in Visual arts and a specific focus on Drawing,Painting and Printmaking based art.</span>
+          <a href="https://www.instagram.com/subhankar_chakraborty25?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;"><p><i class="fa fa-instagram fa-fw w3-xlarge w3-margin-right"></i> @subhankar_chakraborty25</p></a>
+        </li>   
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="../images/chitrasanthe/prerana.jpeg" alt="Image" class="w3-left w3-margin-right" style="width:70px">
+          <span class="w3-large">Prerana H Sulibhavi</span><br>
+          <span>Illustrator | Artist</span>
+          <a href="https://www.instagram.com/map_weavingstories?igsh=amdlMm1lbXMzcmE5" style="text-decoration: none;"><p><i class="fa fa-instagram fa-fw w3-xlarge w3-margin-right"></i> @map_weavingstories</p></a>
+        </li>  
+        <!-- <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Mingsum</span><br>
+          <span>Lorem ipsum dipsum</span>
+        </li>  -->
+      </ul>
+    </div>
+    <hr> 
+   
+    <!-- Labels / tags -->
+    <div class="w3-card w3-margin">
+      <div class="w3-container w3-padding">
+        <h4>Tags</h4>
+      </div>
+      <div class="w3-container w3-white">
+      <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+      </p>
+      </div>
+    </div>
+    
+  <!-- END Introduction Menu -->
+  </div>
+  
+  <!-- END GRID -->
+  </div><br>
+  
+  <!-- END w3-content -->
+  </div>
+<!-- ################################################################################### -->
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
+    <!-- <i class="fa fa-instagram w3-hover-opacity"></i> -->
+    <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+    <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+    <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
+    <!-- <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-gmail w3-hover-opacity"></i> -->
+  </div>
+ <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>-->
+</footer>
+  
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

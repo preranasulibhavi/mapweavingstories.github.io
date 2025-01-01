@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MAP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+
+<style>
+.hidden {
+    display: none !important; /* Ensure that items with the hidden class are not displayed */
+}
+
+.gallery-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #ddd;
+    /* border-radius: 5px; */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.item {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+.card {
+    width: calc(33.33% - 20px); /* Adjust the width of each card to fit three cards per row */
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center; /* Optionally, center the description text */
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <img src="../images/main_page/logo1.png" alt="Logo" style="max-width: 150px; height: 60px;">
+      <a href="#MAP" style="text-decoration: none;">MAPPING ARTISTIC PROGRESSSION</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <!-- <a href="#about" class="w3-bar-item w3-button">ABOUT</a> -->
+        <a href="../app.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> HOME</a>
+        <a href="../pages/work.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+        <a href="../pages/blog.html" class="w3-bar-item w3-button"><i class="fa fa-file"></i> BLOG</a>
+        <a href="../app.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <!-- <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a> -->
+  <a href="../app.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  
+
+</header>
+
+
+
+
+<br>
+
+
+<br>
+
+
+
+
+
+
+<br><br>
+
+
+<!-- ##################################### -->
+<!-- <hr id="about"> -->
+<!-- ##################################### -->
+
+
+<!-- <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px;border-radius: 8px; box-shadow: 0 2px 8px 1px rgba(0,0,0,0.2); max-width: 80%; margin: 0 auto; background-color: #fff;">
+  <img src="../images/main_page/work_pic1.jpg" alt="Image" style="max-width: 200px; height: auto; margin-right: 20px; border-radius: 8px;">
+  <div style="flex-grow: 1;">
+    <h2>Right Content</h2>
+    <p>This is some text content on the right side of the card. You can put any content here.</p>
+  </div>
+</div> -->
+
+<!-- ############################################ -->
+<div class="gallery-container">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px;border-radius: 8px; box-shadow: 0 2px 8px 1px rgba(0,0,0,0.2); max-width: 98%; margin: 0 auto; background-color: #fff;">
+    <img src="../images/main_page/work_pic1.jpg" alt="Image" style="max-width: 200px; height: auto; margin-right: 20px; border-radius: 8px;">
+    <div style="flex-grow: 1; padding-left: 10%;">
+      
+      <!-- <p>This is some text content on the right side of the card. You can put any content here.</p> -->
+      <div class="filter-buttons">
+        <h2>Choose Your Interest</h2>
+        <button class="filter-button" data-filter="all">All</button>
+        <button class="filter-button" data-filter="mini_paintings">Mini Paintings</button>
+        <button class="filter-button" data-filter="painting">Paintings</button>
+        <button class="filter-button" data-filter="penworks">Pen Works</button>
+        <button class="filter-button" data-filter="spiral">Spiral Potraits</button>
+        <button class="filter-button" data-filter="potraits">Potraits</button>
+    </div>
+    </div>
+    
+  </div>
+  <!-- <div class="filter-buttons">
+      <button class="filter-button" data-filter="all">All</button>
+      <button class="filter-button" data-filter="mini_paintings">Mini Paintings</button>
+      <button class="filter-button" data-filter="painting">Painting</button>
+      <button class="filter-button" data-filter="penworks">Pen Works</button>
+  </div> -->
+  <br><br>
+  <!-- Mini Paintings -->
+  <div class="gallery">
+    <div class="item mini_paintings">
+      <div class="card">
+          <img src="../images/mini_paintings/1_Girl.jpeg" alt="1_Girl">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+      </div>
+      <div class="card">
+        <img src="../images/mini_paintings/2_Lion.jpeg" alt="2_Lion">
+        <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+      </div>
+      <div class="card">
+        <img src="../images/mini_paintings/3_Floral.jpeg" alt="3_Floral">
+        <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+      </div>
+      <!-- <div class="card">
+        <img src="../images/mini_paintings/4_fam.jpeg" alt="4_fam">
+        <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div>
+      </div>
+      <div class="card">
+        <img src="../images/mini_paintings/5_butterfly.jpeg" alt="5_butterfly">
+        <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div>
+      </div> -->
+    </div>
+    
+  
+    <!-- Pen works -->
+    <div class="item penworks">
+        <div class="card">
+            <img src="../images/penworks/1_scenic.jpeg" alt="1_scenic">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/2_Village.jpeg" alt="2_Village">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/3_Girl.jpeg" alt="3_Girl">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/4_City.jpeg" alt="4_City">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/5_India.jpeg" alt="5_India">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/6_Dance.jpeg" alt="6_Dance">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/7_geometric_elephant.jpeg" alt="7_geometric_elephant">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/8_geometric_lion.jpeg" alt="8_geometric_lion">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/9_geometric_giraffee.jpeg" alt="9_geometric_giraffee">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/10_geometric_cat.jpeg" alt="10_geometric_cat">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/11_birth.jpeg" alt="11_birth">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/12_lost.jpeg" alt="12_lost">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/13_ramayan.jpeg" alt="13_ramayan">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/14_Buddha.jpeg" alt="14_Buddha">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/penworks/15_Rainbow_elephant.jpeg" alt="15_Rainbow_elephant">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <!-- More pen works here -->
+    </div>
+
+      <!-- Sprial Potraits -->
+      <div class="item spiral">
+        <div class="card">
+          <img src="../images/spiral/1_spiral.jpeg" alt="spiral">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/spiral/2_spiral.jpeg" alt="spiral">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/spiral/3_spiral.jpeg" alt="spiral">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/spiral/4_spiral.jpeg" alt="spiral">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/spiral/5_spiral.jpeg" alt="spiral">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/spiral/6_spiral.jpeg" alt="spiral">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <!-- <div class="card">
+          <img src="../images/spiral/7_spiral.jpeg" alt="spiral">
+          <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div>
+        </div> -->
+      </div>
+      <!-- Paintings -->
+      </div>
+      <div class="item painting">
+          <div class="card">
+              <img src="../images/paintings/1_ram.jpeg" alt="1_ram">
+              <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+              <img src="../images/paintings/2_krishna_contempory.jpeg" alt="2_krishna_contempory">
+              <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+              <img src="../images/paintings/3_paris_dog.jpeg" alt="3_paris_dog">
+              <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/4_ganesh.png" alt="4_ganesh">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/5_galaxy.jpeg" alt="5_galaxy">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/6_krishna.jpeg" alt="6_krishna">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/7_Multitasking.jpeg" alt="7_Multitasking">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/8_Krishna.jpeg" alt="8_Krishna">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/9_music.jpeg" alt="9_music">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/10_visual.jpeg" alt="10_visual">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+          <div class="card">
+            <img src="../images/paintings/11_devi.jpeg" alt="11_devi">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+          </div>
+      </div>
+
+      <!-- Potraits -->
+      <div class="item potraits">
+        <div class="card">
+            <img src="../images/potraits/1_potrait.jpg" alt="1_potrait">
+            <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <div class="card">
+          <img src="../images/potraits/2_potrait.jpg" alt="2_potrait">
+          <!-- <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div> -->
+        </div>
+        <!-- <div class="card">
+          <img src="../images/potraits/3_potrait.jpeg" alt="3_potrait">
+          <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div>
+        </div>
+        <div class="card">
+          <img src="../images/potraits/4_potrait.jpeg" alt="4_potrait">
+          <div class="description"><p>Medium : Arcylic</p><p>Dimension : 20.32cm x 25.40cm (8x10) </p></div>
+        </div> -->
+      
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const items = document.querySelectorAll('.item');
+
+      filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+              const filter = button.dataset.filter;
+
+              items.forEach(item => {
+                  if (filter === 'all' || item.classList.contains(filter)) {
+                      item.classList.remove('hidden');
+                  } else {
+                      item.classList.add('hidden');
+                  }
+              });
+          });
+      });
+  });
+</script>
+
+<!-- ################################################### -->
+
+<br><br>
+</div>
+
+
+
+<br><br>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-instagram w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <i class="fa fa-gmail w3-hover-opacity"></i> -->
+    </div>
+   <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>-->
+  </footer>
+  
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
